@@ -58,7 +58,7 @@
 #hero-image {
     position: absolute;
     display: block;
-    background: url(../images/hero-image.jpg) no-repeat center;
+    background: url no-repeat center;
     background-size: cover;
     width: 100vw;
     height: 100vh;

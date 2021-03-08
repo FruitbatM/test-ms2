@@ -1,0 +1,36 @@
+
+body {
+    background-color: #fafafa;
+    font-family: 'Open Sans';
+    color: white;
+}
+
+h1 {
+    font-family: 'Bungee';
+    color: red;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.text-header {
+    font-family: sans-serif;
+    color: red;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #FF7900;
+}
+
+#leprechaun {
+    height: 5rem;
+    width: 5rem;
+    margin-top: 0.7rem;
+    margin-left: 1.3rem;
+    cursor: pointer;
+}
+
+
