@@ -18,59 +18,166 @@
     <header>
         <!--Navbar-->
         <nav class="navbar navbar-light">
+            <a href="index.html" class="navbar-brand"></a>
+            <img src="assets/images/logo-130x133px.png" class="logo" alt="Explore Japan logo">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <img src="assets/images/logo-130x133px.png" class="logo" alt="Explore Japan logo">
-                    <a href="#" class="navbar-logo navbar-brand"></a>
-                <div id="myNav" class="overlay">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <div class="overlay-content">
-                        <a href="#">Home</a>
-                        <a href="#">Explore</a>
-                        <a href="#">Map</a>
-                        <a href="#">Contact</a>
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <ul class="menu">
+                                <li><a href="index.html" >Home</a></li>
+                                <li><a href="#explore-section">Explore</a></li>
+                                <li><a href="#map-section">Map</a></li>
+                                <li><a href="#weather-section">Weather</a></li>
+                                <li><a href="#contact-section">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
+                    <span id="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>  
                 </div>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>  
+                <!-- Social Media Icons -->
+                <div class="container social-header">
+                    <div class="row">
+                        <div class="col-sm-12 social-media text-right pl-2">
+                            <a href="https://instagram.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram-square hvr-buzz-out mr-3 p-1" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-square hvr-buzz-out mr-3" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener">
+                            <i class="fab fa-twitter-square hvr-buzz-out mr-1" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <!--Hero image-->
-        <div id="hero-image" class="img-fluid">
-            <div class="background-bar"></div>  
-                <h1 class="hero-text">Explore National Parks<br>of Japan</h1> 
-        </div>
-    <section class="discover-section text-center">
-        <div class="container-fluid discover-japan pt-5">
-            <div class="row">
-                <div class="col-12">
-                    <div class="discover-header">
-                        <h2>Discover top National Parks of Japan</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum rem assumenda ullam tempora culpa omnis provident necessitatibus, laborum saepe nobis, consequatur velit asperiores ab molestiae at fugit enim eaque sit quisquam dolores aliquid. Accusantium reprehenderit, quam labore pariatur omnis molestiae mollitia iste nisi corporis deserunt est eveniet laborum, atque ea. Temporibus et explicabo harum expedita, deserunt a laboriosam ex dignissimos iste corrupti quidem accusamus voluptate ut autem nulla sit. Aliquid aut dignissimos sequi cupiditate soluta suscipit mollitia commodi labore, cum numquam totam dolores voluptatem expedita, blanditiis, impedit nulla temporibus quasi similique. Repellendus, delectus odio. Aut obcaecati vitae nostrum fugiat facere.</p>
+    <div id="hero-image" class="img-fluid">
+            <h1 class="hero-text">Explore National Parks<br>of Japan</h1>
+    </div>
+    <section id="explore-section">
+        <div class="container discover-japan">
+            <div class="row text-center">
+                <i class="fas fa-map-signs fa-3x icon" aria-hidden="true"></i>
+                <div class="col-12 mt-4">
+                    <div class="text-header m-2">
+                        <h2>National Parks of Japan</h2>
+                            <p class="para-explore">
+                            Japan is home to 34 national parks and a wide range of habitats, from tropical beaches, active volcanoes and alpine peaks to ancient forests and crater lakes.
+                            National parks play a valuable role in protecting Japan’s scenic beauty, cultural traditions, and the enduring relationship between humans and nature.
+                            </p>
+                            <p class="para-explore">
+                            Unlike national parks in many other countries, the land within Japan’s national parks is a mix of private land, prefectural land and local government land, 
+                            and much of it is inhabited by people. Visitors don't need a permit to visit or stay in national parks in Japan. Visitors are free to enter and leave at any time. 
+                            There are no entrance fees, opening hours or closing hours. 
+                            <br>
+                            <br>
+                            Explore ten most beautiful national parks of Japan.
+                            </p>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 
-
-    <section class="contact-section">
+    <!--Weather information-->
+    <section id="weather-section">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center contact-heading">
-                    <h2>Get in touch!</h2>
-
+            <div class="row text-center">
+                <i class="fas fa-cloud-sun fa-3x icon" aria-hidden="true"></i>
+                <div class="col-12 mt-4 mb-4">
+                    <div class="weather-title text-header my-2">
+                        <h2>Weather</h2>      
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="weather-search mt-2">
+            <div class="container">
+                <div class="row">
+                        <div class="col-md-6 order-lg-1 order-sm-2 px-3 text-center">
+                            <div class="dropdown my-4">
+                                <button class="btn btn-danger dropdown-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Select a National Park</span>
+                                </button>
+                                    <ul class="dropdown-menu" aria-labelledby="national-parks">
+                                        <li><a class="dropdown-item" href="#">Fuji Hakone Izu National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Akan Mashu National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Shiretoko National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Nikko National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Yakushima National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Yoshino Kumano National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Towada Hachimantai National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Aso Kuju National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Iriomote Ishigaki National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Saikai National Park</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    <br>
+                    <div class="col-md-6 order-lg-2 order-sm-1 px-3 text-center">
+                        <div class="notification"></div>
+                        <div class="weather-container">
+                            <div id="weather-icon">
+                                <img src="#" alt="wheater icon">
+                            </div>
+                                <div id="temperature-value">
+                                    <p>0 °<span>C</span></p>
+                                </div>
+                                <div id="temperature-description">
+                                    <p>-</p>
+                                </div>
+                                <div id="location">
+                                    <p>-</p>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
     </section>
-    <footer>
 
+    <!--Contact section-->
+    <section id="contact-section">
+        <div class="form-container col-12 mt-4">
+            <div class="row text-center">
+                <i class="far fa-envelope fa-3x icon" aria-hidden="true"></i>
+                    <div class="text-header mt-2 mb-4">
+                        <h2>Get in touch!</h2>
+                    </div>
+            
+                    <div class="col-12 justify-content-center">
+                        <form id="contactForm" class="getInTouch-form" onsubmit="return sendMail(this);">
+                            <input type="text" name="name" id="fullname" class="form-control" placeholder="Your Full Name" required>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email Address" required>
+                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
+                            <textarea class="form-control" name="message" id="message" rows="7" placeholder="Message" required></textarea>
+                                <div class="form-button">
+                                    <button type="submit" class="btn-contact mt-4" aria-label="Submit the contact form">Send</button>
+                                </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid footer-section pt-3">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p class="copyright">Copyright @ Marina Pavlovic 2021</p> 
+            </div>
+        </div>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/weather.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
