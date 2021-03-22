@@ -88,61 +88,14 @@
     </section>
 
     <!--Weather information-->
-    <section id="weather-section">
-        <div class="container">
-            <div class="row text-center">
-                <i class="fas fa-cloud-sun fa-3x icon" aria-hidden="true"></i>
-                <div class="col-12 mt-4 mb-4">
-                    <div class="weather-title text-header my-2">
-                        <h2>Weather</h2>      
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="weather-search mt-2">
-            <div class="container">
-                <div class="row">
-                        <div class="col-md-6 order-lg-1 order-sm-2 px-3 text-center">
-                            <div class="dropdown my-4">
-                                <button class="btn btn-danger dropdown-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                    <span>Select a National Park</span>
-                                </button>
-                                    <ul class="dropdown-menu" aria-labelledby="national-parks">
-                                        <li><a class="dropdown-item" href="#">Fuji Hakone Izu National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Akan Mashu National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Shiretoko National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Nikko National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Yakushima National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Yoshino Kumano National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Towada Hachimantai National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Aso Kuju National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Iriomote Ishigaki National Park</a></li>
-                                        <li><a class="dropdown-item" href="#">Saikai National Park</a></li>
-                                    </ul>
-                            </div>
-                        </div>
-                    <br>
-                    <div class="col-md-6 order-lg-2 order-sm-1 px-3 text-center">
-                        <div class="notification"></div>
-                        <div class="weather-container">
-                            <div id="weather-icon">
-                                <img src="#" alt="wheater icon">
-                            </div>
-                                <div id="temperature-value">
-                                    <p>0 °<span>C</span></p>
-                                </div>
-                                <div id="temperature-description">
-                                    <p>-</p>
-                                </div>
-                                <div id="location">
-                                    <p>-</p>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </section>
+<section class="weather">
+    <h2 class="text-center">Weather</h2>
+  <div class="container">
+    <div class="forecast">
+    
+    </div>
+  </div>
+</section>
 
     <!--Contact section-->
     <section id="contact-section">
@@ -174,8 +127,8 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/script.js"></script>
     <script src="assets/js/weather.js"></script>
+    <script src="assets/js/weather-obs.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

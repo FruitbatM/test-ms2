@@ -1,22 +1,39 @@
-let lat = 35.23264;
-let lon = 139.0135;
-const apiKey = 'b3e0a4fb9d29b25beb45fdf2cad771b0';
+fetchForecast = function () {
+	var endpoint =
+		"https://api.openweathermap.org/data/2.5/onecall?lat=38.7267&lon=-9.1403&exclude=current,hourly,minutely,alerts&units=metric&appid=b3e0a4fb9d29b25beb45fdf2cad771b0";
+    var forecastEl = document.getElementsByClassName("forecast");
+    
+	fetch(endpoint)
+	.then(function (response) {
+		if (200 !== response.status) {
+			console.log(
+				"Looks like there was a problem. Status Code: " + response.status
+			);
+			return;
+		}
 
-const temperatureValue = document.getElementById('temperature-value');
-const temperatureDescription = document.getElementById('temperature-description');
+		forecastEl[0].classList.add('loaded');
 
-function getWeather(latitude, longitude) {
-  const api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-
-  fetch(api)
-    .then(response => {
-    })
-    .then(data => {
-      console.log(data);
-      const {temp, description, name} = data.currently;
-      //Set DOM elememnts from the API
-      temperatureValue.textContent = temp;
-      temperatureDescription[0].textContent = description;
-
-    });
+		response.json().then(function (data) {
+			var fday = "";
+			data.daily.forEach((value, index) => {
+				if (index > 0) {
+					var dayname = new Date(value.dt * 1000).toLocaleDateString("en", {
+						weekday: "long",
+					});
+					var icon = value.weather[0].icon;
+					var temp = value.temp.day.toFixed(0);
+					fday = `<div class="forecast-day">
+						<p>${dayname}</p>
+						<p><span class="ico-${icon}" title="${icon}"></span></p>
+						<div class="forecast-day--temp">${temp}<sup>°C</sup></div>
+					</div>`;
+					forecastEl[0].insertAdjacentHTML('afterbegin', fday);
+				}
+			});
+		});
+	})
+	.catch(function (err) {
+		console.log("Fetch Error :-S", err);
+	});
 };
