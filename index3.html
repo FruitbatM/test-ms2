@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style2.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<title>Explore National Parks of Japan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <title>Explore National Parks of Japan</title>
 </head>
 <body>
-    <!--Header-->
     <header>
         <!--Navbar-->
         <nav class="navbar navbar-light">
@@ -62,7 +61,11 @@
     <div id="hero-image" class="img-fluid">
             <h1 class="hero-text">Explore National Parks<br>of Japan</h1>
     </div>
-    <section id="explore-section">
+    <div class="arrow bounce">
+        <a href="#explore-section" class="fas fa-chevron-down fa-2x" aria-hidden="true"></a>
+    </div>
+    <!--Explore section-->
+    <section id="explore-section" class="bg-light">
         <div class="container discover-japan">
             <div class="row text-center">
                 <i class="fas fa-map-signs fa-3x icon" aria-hidden="true"></i>
@@ -82,20 +85,119 @@
                             Explore ten most beautiful national parks of Japan.
                             </p>
                     </div>
+                    <div class="row pt-3 py-2" id="explore-img">
+                        <div class="col-md-6">
+                            <img src="assets/images/mt-nantai-nikko-np.jpg" alt="Mount Nantai, Nikko National Park, Japan " class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="assets/images/shikotsu-toya-np.jpg" alt="Shikotsu Toya National Park, Japan" class="img-fluid d-none d-md-block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Map section-->
+    <section id="map-section">
+        <div class="container discover-japan">
+            <div class="row text-center">
+                <i class="fas fa-map-marked-alt fa-3x icon" aria-hidden="true"></i>
+                <div class="col mt-4">
+                    <div class="text-header mt-2 mb-4 pb-2">
+                        <h2>Map</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 order-lg-1 order-md-1 order-sm-2" id="side-column">
+                    <img class="img-fluid np-img" src="assets/images/fuji-hakone-izu.jpg" alt="Fuji Hakone Izu National Park">
+                    <h4 class="side-heading text-center pt-3 pb-1">Fuji Hakone Izu National Park</h4>
+                        <p class="side-text">
+                        Fuji Hakone Izu is the most popular of Japan's national parks due to its close proximity to Tokyo.
+                        It is famous for its ancient history, its shrine and hot springs in addition to views of nearby Mount Fuji.
+                        </p>
+                        <p class="side-text">
+                        The mountain has been the natural soul of Japan since ancient times. In the park, you can wander through timeless forests, explore lava caves and bathe in hot springs. You can even swim with dolphins off the coast of the southern Izu islands.
+                        </p>
+                        <p class="side-text">
+                        <strong>How to get there:</strong> From Shinjuku Station in Tokyo, take the JR Chuo Line to Otsuki Station. 
+                        There, transfer to the Fujikyu Railway Line to Kawaguchiko Station. This trip takes just under three hours.
+                        </p>
+                </div>
+                <div class="col-lg-7 col-md-6 text-center order-lg-2 order-md-2 order-sm-1">
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!--Weather information-->
-<section class="weather">
-    <h2 class="text-center">Weather</h2>
-  <div class="container">
-    <div class="forecast">
-    
-    </div>
-  </div>
-</section>
+    <section id="weather-section" class="bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <i class="fas fa-cloud-sun fa-3x icon" aria-hidden="true"></i>
+                <div class="col-12 mt-4 mb-4">
+                    <div class="weather-title text-header my-2">
+                        <h2>Weather</h2>      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weather-search mt-2">
+            <div class="container">
+                <div class="row">
+                        <div class="col-md-6 order-lg-1 order-sm-2 px-3 text-center">
+                            <div class="dropdown my-4">
+                                <button class="btn btn-danger dropdown-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Select a National Park</span>
+                                </button>
+                                    <ul class="dropdown-menu" aria-labelledby="national-parks">
+                                        <li><a class="dropdown-item" href="#">Fuji Hakone Izu National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Akan Mashu National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Shiretoko National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Nikko National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Yakushima National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Yoshino Kumano National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Towada Hachimantai National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Aso Kuju National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Iriomote Ishigaki National Park</a></li>
+                                        <li><a class="dropdown-item" href="#">Saikai National Park</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    <br>
+                    <div class="col-md-6 order-lg-2 order-sm-1 px-3 text-center">
+                        <div class="weather-container mb-5">
+                            <div id="weather-icon"></div>
+                            <div id="location-date">
+                                <h2> - </h2>
+                            </div>
+                            <div id="temp-value">
+                                <p>- °<span id="units">C</span></p>
+                            </div>
+                            <div id="temp-description">
+                                <p> - </p>
+                            </div>
+                            <div id="wind-speed">
+                                <p> - </p>
+                            </div>
+                            <div id="sunrise">
+                                <p> - </p>
+                            </div>
+                            <div id="sunset">
+                                <p> - </p>
+                            </div>
+                            <div id="location">  <!--Remove once call per NP location is set-->
+                                <p> - </p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--Contact section-->
     <section id="contact-section">
@@ -127,10 +229,27 @@
             </div>
         </div>
     </footer>
+    <!--Scroll Back to Top Arrow-->
+    <button onclick="topFunction()" id="arrow_2top" title="Go to top">
+        <i class="fas fa-chevron-circle-up fa-3x" aria-hidden="true"></i>
+    </button>
+
+    <!-- internal script file -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/maps.js"></script>
     <script src="assets/js/weather.js"></script>
-    <script src="assets/js/weather-obs.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
+    <!---->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy8IyX7_mfbEUH8q1lceATeEs_BRPlbpU&callback=initMap&libraries=&v=weekly" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("user_DkY6Dzw8RNHgzSkoWcGLn");
+        })();
+    </script>
 </body>
 </html>
