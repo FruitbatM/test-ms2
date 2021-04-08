@@ -493,3 +493,10 @@ form input {
         letter-spacing: 0.1rem;
     }
 }
+
+
+.tippy-tooltip.light-theme .tippy-tooltip-content {
+  /* Your styling here. Example: */
+  text-align: justify;
+	padding: 5px;
+}

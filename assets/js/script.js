@@ -14,3 +14,9 @@ menuLinks.forEach (
     menuLink.addEventListener('click', closeNav);
   }
 );
+
+tippy('.hover-info',{
+	arrow: true,
+	theme: 'light',
+	size: 'big'
+} );
